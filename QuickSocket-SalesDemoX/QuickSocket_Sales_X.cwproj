@@ -1,0 +1,60 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0CCB6516-0C65-437D-8F57-5710AB386507}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>QuickSocket_Sales_X</AssemblyName>
+    <OutputName>QuickSocket Sales X</OutputName>
+    <DefineConstants>_ABCDllMode_=&gt;0%3b_ABCLinkMode_=&gt;1%3b</DefineConstants>
+    <Model>Lib</Model>
+    <ApplicationIcon>QuickSocket Sales X.ico</ApplicationIcon>
+    <stack_size>16384</stack_size>
+    <CopyCore>True</CopyCore>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+    <warnings>on</warnings>
+    <GenerateMap>True</GenerateMap>
+    <line_numbers>False</line_numbers>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EFOCUS.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="QuickChatMain.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="QuickSocket_Sales_X.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="QUICKSOCKET_SALES_X_BC.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="QuickSocket_Sales_X_BC0.CLW">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="QuickSocket_Sales_X_Main.clw">
+      <Generated>true</Generated>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="GradBlue.png" />
+    <Library Include="GradGreen.png" />
+    <Library Include="GradOrange.png" />
+    <Library Include="GradRed.png" />
+    <Library Include="GradWhite.png" />
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
